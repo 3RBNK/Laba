@@ -1,0 +1,3 @@
+D:/мусор/лабораторки/оп/laba_op_14/code/cmake-build-debug/CMakeFiles/code.dir
+D:/мусор/лабораторки/оп/laba_op_14/code/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/мусор/лабораторки/оп/laba_op_14/code/cmake-build-debug/CMakeFiles/rebuild_cache.dir

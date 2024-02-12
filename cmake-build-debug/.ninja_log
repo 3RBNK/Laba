@@ -1,5 +1,6 @@
 # ninja log v5
-1	367	7294333803359767	CMakeFiles/code.dir/main.c.obj	8510440ebf9534de
-369	571	7294333805339004	code.exe	82f11d6bc9d43738
 4	129	7294334029525064	CMakeFiles/code.dir/main.c.obj	8510440ebf9534de
 129	259	7294334030745787	code.exe	82f11d6bc9d43738
+10	204	7294416300174464	CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj	6780b4f5b65c2ba1
+3	205	7294416300184499	CMakeFiles/code.dir/main.c.obj	8510440ebf9534de
+205	365	7294416301742964	code.exe	cf740b0b379baa6f

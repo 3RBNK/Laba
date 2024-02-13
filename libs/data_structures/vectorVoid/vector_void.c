@@ -19,7 +19,7 @@ vectorVoid createVectorV(size_t n, size_t base_type_size) {
         exit(1);
     }
 
-    return (vectorVoid) {data,0,n};
+    return (vectorVoid) {data,0,n, base_type_size};
 }
 
 
@@ -83,20 +83,25 @@ void getVectorValueV(vectorVoid *v, size_t index, void *destination) {
 
 
 void setVectorValueV(vectorVoid *v, size_t index, void *source) {
+    if (index >= v->capacity) {
+        fprintf(stderr, "IndexError: a[%lld] is not exists", index);
+        exit(1);
+    }
+
     char *address_element = (char *) v->data + index * v->base_type_size;
     memcpy(address_element, source, v->base_type_size);
 }
 
 
 void popBackV(vectorVoid *v) {
-    if (v->size == 0) {
+    if (isEmptyV(*v)) {
         fprintf(stderr, "Zero length");
         exit(1);
     }
 
     v->size--;
 
-    if (v->size <= v->capacity / 4)
+    if (v->size < v->capacity / 4)
         reserveV(v, v->capacity / 2);
 }
 
@@ -116,4 +121,3 @@ void pushBackV(vectorVoid *v, void *source) {
     setVectorValueV(v, v->size, source);
     v->size++;
 }
-

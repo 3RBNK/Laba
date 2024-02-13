@@ -5,7 +5,6 @@
 
 #include <stdio.h>
 #include <malloc.h>
-#include <assert.h>
 
 
 #include "vector.h"
@@ -60,7 +59,7 @@ void clear(vector *v) {
 
 
 void shrinkToFit(vector *v) {
-    v->capacity = v->size;
+    reserve(v, v->size);
 }
 
 
@@ -90,7 +89,13 @@ int getVectorValue(vector v, size_t i) {
 
 void pushBack(vector *v, int x) {
     if (isFull(*v)) {
-        reserve(v, v->capacity * 2);
+        size_t new_capacity;
+        if (v->capacity == 0)
+            new_capacity = 1;
+        else
+            new_capacity = v->capacity * 2;
+
+        reserve(v, new_capacity);
     }
 
     v->data[v->size] = x;
@@ -107,3 +112,32 @@ void popBack(vector *v) {
     v->size--;
 }
 
+
+int* atVector(vector *v, size_t index) {
+    if (index >= v->size) {
+        fprintf(stderr, "IndexError: a[%lld] is not exists", index);
+        exit(1);
+    }
+
+    return &v->data[index];
+}
+
+
+int* back(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "zero length");
+        exit(1);
+    }
+
+    return &v->data[v->size - 1];
+}
+
+
+int* front(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "zero length");
+        exit(1);
+    }
+
+    return &v->data[0];
+}

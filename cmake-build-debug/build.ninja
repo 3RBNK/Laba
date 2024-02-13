@@ -61,6 +61,12 @@ build CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj: C_COMPILER__
   OBJECT_DIR = CMakeFiles\code.dir
   OBJECT_FILE_DIR = CMakeFiles\code.dir\libs\data_structures\vector
 
+build CMakeFiles/code.dir/libs/data_structures/vectorVoid/vector_void.c.obj: C_COMPILER__code_unscanned_Debug D$:/мусор/лабораторки/оп/laba_op_14/code/libs/data_structures/vectorVoid/vector_void.c || cmake_object_order_depends_target_code
+  DEP_FILE = CMakeFiles\code.dir\libs\data_structures\vectorVoid\vector_void.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\code.dir
+  OBJECT_FILE_DIR = CMakeFiles\code.dir\libs\data_structures\vectorVoid
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target code
@@ -69,7 +75,7 @@ build CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj: C_COMPILER__
 #############################################
 # Link the executable code.exe
 
-build code.exe: C_EXECUTABLE_LINKER__code_Debug CMakeFiles/code.dir/main.c.obj CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj
+build code.exe: C_EXECUTABLE_LINKER__code_Debug CMakeFiles/code.dir/main.c.obj CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj CMakeFiles/code.dir/libs/data_structures/vectorVoid/vector_void.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\code.dir

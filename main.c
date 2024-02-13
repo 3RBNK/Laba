@@ -3,6 +3,7 @@
 #include <assert.h>
 
 #include "libs/data_structures/vector/vector.h"
+#include "libs/data_structures/vectorVoid/vector_void.h"
 
 
 void printVector(vector v) {
@@ -221,6 +222,8 @@ void test_vector() {
 
 int main() {
     test_vector();
+
+    vectorVoid v;
 
     return 0;
 }

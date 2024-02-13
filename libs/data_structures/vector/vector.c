@@ -21,9 +21,9 @@ vector createVector(size_t n) {
 }
 
 
-void reserve(vector *v, size_t newCapacity) {
-    if (newCapacity != 0) {
-        int *data = realloc(v->data, sizeof(int) * newCapacity);
+void reserve(vector *v, size_t new_capacity) {
+    if (new_capacity != 0) {
+        int *data = realloc(v->data, sizeof(int) * new_capacity);
 
         if (data == NULL) {
             fprintf(stderr, "bad alloc");
@@ -31,10 +31,10 @@ void reserve(vector *v, size_t newCapacity) {
         }
 
         v->data = data;
-        v->capacity = newCapacity;
+        v->capacity = new_capacity;
 
-        if (v->size > newCapacity)
-            v->size = newCapacity;
+        if (v->size > new_capacity)
+            v->size = new_capacity;
 
     } else {
         free(v->data);

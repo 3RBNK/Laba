@@ -23,7 +23,7 @@ vector createVector(size_t n);
 
 
 // изменяет количество памяти вектора v на newCapacity
-void reserve(vector *v, size_t newCapacity);
+void reserve(vector *v, size_t new_capacity);
 
 
 // очищает вектор v от элементов

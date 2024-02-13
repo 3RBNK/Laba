@@ -223,7 +223,15 @@ void test_vector() {
 int main() {
     test_vector();
 
-    vectorVoid v;
+    vector v = createVector(10);
+
+    pushBack(&v, 10);
+    pushBack(&v, 3);
+    pushBack(&v, 104);
+
+    printf("%d\n", v.data[0]);
+    printf("%d\n", v.data[1]);
+    printf("%d\n", v.data[2]);
 
     return 0;
 }

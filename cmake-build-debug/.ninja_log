@@ -2,3 +2,7 @@
 12	228	7295216587878592	CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj	6780b4f5b65c2ba1
 3	232	7295216587888721	CMakeFiles/code.dir/main.c.obj	8510440ebf9534de
 232	394	7295216589482970	code.exe	cf740b0b379baa6f
+22	306	7295341507143116	CMakeFiles/code.dir/libs/data_structures/vectorVoid/vector_void.c.obj	9f37b9de728c6d1d
+35	314	7295341507303752	CMakeFiles/code.dir/libs/data_structures/vector/vector.c.obj	6780b4f5b65c2ba1
+6	318	7295341508081324	CMakeFiles/code.dir/main.c.obj	8510440ebf9534de
+318	491	7295341509791104	code.exe	157f61d01f437894

@@ -35,7 +35,6 @@ void reserve(vector *v, size_t new_capacity) {
 
         if (v->size > new_capacity)
             v->size = new_capacity;
-
     } else {
         free(v->data);
         v->data = NULL;
@@ -103,6 +102,9 @@ void popBack(vector *v) {
     }
 
     v->size--;
+
+    if (v->size <= v->capacity / 4)
+        reserve(v, v->capacity / 2);
 }
 
 
